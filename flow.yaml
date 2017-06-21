@@ -1,0 +1,8 @@
+apiVersion: "beta.elastic.io/v1"
+kind: IntegrationFlow
+metadata:
+  name: timer-to-node
+flow: {
+    "foo": "bar"
+}
+image: my-awesome-cron-image
