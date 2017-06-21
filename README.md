@@ -29,7 +29,7 @@ Let's take an example of "Timer to Node", integration flow that is to be execute
 ### Cron job
 
 A new cron job is created, something like:
-```
+```yaml
 apiVersion: batch/v2beta
 kind: CronJob
 metadata:
@@ -40,6 +40,10 @@ metadata:
   tenantID: 123456
 spec:
   schedule: "*/1 * * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 100
+  failedJobsHistoryLimit: 100
+  startingDeadlineSeconds: 10
   jobTemplate:
     spec:
       template:
@@ -53,3 +57,7 @@ spec:
             - date; echo Hello from the Kubernetes cluster
           restartPolicy: OnFailure
 ```
+
+Notes
+ * ``startingDeadlineSeconds`` should be 10% of the scheduled interval, e.g. 6 seconds for every minute or 6 minutes for every hour
+
