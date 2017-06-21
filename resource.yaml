@@ -1,0 +1,7 @@
+apiVersion: extensions/v1beta1
+kind: ThirdPartyResource
+metadata:
+  name: integration-flow.beta.elastic.io
+description: "A TPR to describe the elastic.io iPaaS integration flow"
+versions:
+- name: v1
