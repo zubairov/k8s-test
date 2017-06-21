@@ -1,0 +1,11 @@
+{
+  "name": "k8s-prototype",
+  "version": "1.0.0",
+  "description": "Prototype of the k8s controller",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "elastic.io GmbH <info@elastic.io> (http://elastic.io)",
+  "license": "Apache-2.0"
+}
