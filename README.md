@@ -18,6 +18,11 @@ kubectl create -f ./flow.yaml
 kubectl get integrationflow -o json
 ```
 
+## Enable ingress plugin
+
+```
+minikube addons enable ingress
+```
 ## Basic concepts
 
 How intgration flow is reflected in K8S?
